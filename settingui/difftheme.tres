@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cedwp0r0ne1oe"]
+
+[ext_resource type="FontFile" uid="uid://61v5jrdoeci8" path="res://Righteous.ttf" id="1_vos1a"]
+
+[resource]
+default_font = ExtResource("1_vos1a")

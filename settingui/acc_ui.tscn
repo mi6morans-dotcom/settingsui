@@ -1,0 +1,144 @@
+[gd_scene load_steps=14 format=3 uid="uid://beovi7ylntj2l"]
+
+[ext_resource type="Theme" uid="uid://cedwp0r0ne1oe" path="res://difftheme.tres" id="1_7eerl"]
+[ext_resource type="Script" uid="uid://cxga141g8xbfu" path="res://acc_ui.gd" id="1_pbdrh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o0y5x"]
+bg_color = Color(0.25490198, 0.07058824, 0.34117648, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1pys4"]
+bg_color = Color(0.99, 0.75900006, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmihh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04l44"]
+bg_color = Color(1, 0.95199996, 0.04000002, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmn5l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27vor"]
+bg_color = Color(1, 0.7294118, 0.039215688, 0.6901961)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4hi0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swdor"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o0unj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffk1u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0yhm1"]
+
+[node name="Acc_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pbdrh")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -175.5
+offset_right = 304.0
+offset_bottom = 175.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7eerl")
+theme_override_styles/panel = SubResource("StyleBoxFlat_o0y5x")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_right = 81.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.99, 0.75900006, 0, 1)
+text = "Account"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 44.000004
+offset_top = 75.5
+offset_right = -524.0
+offset_bottom = -249.5
+theme_override_colors/font_color = Color(0.9882353, 0.7607843, 0, 1)
+text = "Acc Level:"
+
+[node name="Label3" type="Label" parent="Panel/Label2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 39.0
+offset_right = 199.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.9882353, 0.7607843, 0, 1)
+text = "Acc Score:"
+
+[node name="Panel" type="Panel" parent="Panel/Label2/Label3"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 43.0
+offset_right = 523.0
+offset_bottom = 211.0
+
+[node name="Label" type="Label" parent="Panel/Label2/Label3"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 48.0
+offset_right = 34.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0.9882353, 0.7607843, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "medals:"
+
+[node name="Button3" type="Button" parent="Panel/Label2/Label3/Label"]
+layout_mode = 1
+offset_left = -35.0
+offset_top = -156.0
+offset_right = 5.0
+offset_bottom = -118.0
+theme_override_colors/font_color = Color(1, 0.39, 0.39, 1)
+theme_override_colors/font_focus_color = Color(1, 0.39, 0.39, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.99, 0.59400004, 0.59400004, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_1pys4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_cmihh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_04l44")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_lmn5l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_27vor")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_n4hi0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_swdor")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_o0unj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ffk1u")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0yhm1")
+text = "X"
+
+[connection signal="pressed" from="Panel/Label2/Label3/Label/Button3" to="." method="_on_button_3_pressed"]

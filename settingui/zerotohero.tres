@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://gd8a1eh4nmj"]
+
+[ext_resource type="FontFile" uid="uid://61v5jrdoeci8" path="res://Righteous.ttf" id="1_uixdi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hi51r"]
+bg_color = Color(0.25494334, 0.071399994, 0.34, 1)
+
+[resource]
+default_font = ExtResource("1_uixdi")
+default_font_size = 24
+Panel/styles/panel = SubResource("StyleBoxFlat_hi51r")
